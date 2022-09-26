@@ -1,0 +1,5 @@
+//funcion para ordenar fechas
+//las fechas son cadenas con formatos "dd/mm/yyyy"
+//funcion para ordenar dnis formato /nnnnnnnl"
+//funcino dque dado un array busca el numero de veces que aparece un valor dado
+//ejercicio que emule la cola de un supermercado en el cual llega clientes y el cajero les cobra.
