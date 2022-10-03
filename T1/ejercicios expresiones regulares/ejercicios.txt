@@ -1,0 +1,12 @@
+1. expresion regular paradeectar que la extension tiene que er .jpg .gif o .png
+
+
+(\.(jpg|gif|png)$)
+
+2. detectar codigos de barras EAN13 españoles
+3. direcciones ip
+4. direcciones email
+5. telefono movil español
+6. telefono fijo español
+7. para hora
+9. nombre completo español
