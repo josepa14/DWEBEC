@@ -6,11 +6,17 @@ class Alumno {
       this.apellido2 = apellido2;
     }
 
-    fila() {
-        return "<tr><td>"+this.nombre+"</td><td>"+this.apellido1+"</td><td>"+this.apellido2+"</td></tr>";
+
+
+    //metodo toFila que genera el html
+    toFila(ind) {
+        return "<tr><td>"+this.nombre+"</td><td>"
+          +this.apellido1+"</td><td>"
+          +this.apellido2+"</td><td>"+
+          "<span onClick='clase.borra("+ind+");clase.pinta()'>X</span>"+
+          "<span onClick='editar("+ind+")'> Editar</span></td></tr>";
         
     }
   }
 
-  var obj1=new Alumno("Jose Pablo","mmm","kjgksjdf");
-  obj1.fila()
+  //var obj1=new Alumno("Jose Pablo","mmm","kjgksjdf");

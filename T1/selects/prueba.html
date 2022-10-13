@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <select name="alumnos" id="alumnos" size="5" multiple="multiple">
+        <option> Pedro</option>
+        <option> Juan</option>
+        <option> Benito</option>
+        <option> Jose</option>
+        <option> Pablo</option>
+        <option> Carlos</option>
+        <option> Mariano</option>
+        <option> Pinocho</option>
+        <option> Adry</option>
+        <option> Josele</option>
+    </select>
+    <select name="matriculados" id="matriculados" size="5" multiple="multiple">
+    </select>
+    <button id="pasar1">-}</button>
+    <script>
+
+boton1 = document.getElementById("pasar1");
+const seleccion= [];
+var alumnos= document.getElementById("alumnos");
+var matriculados =document.getElementById("matriculados");
+
+/*boton1.onclick = function(){
+    for (let i= alumnos.options.length-1; i >=0 ;i--){
+        console.log(alumnos.options.length);
+        if(alumnos.options[i].selected){
+            console.log(alumnos.options[i]);
+            matriculados.appendChild(alumnos.options[i]);
+        }
+
+}
+*/
+boton1.onclick = function(){
+    for (let i= 0; i <alumnos.options.length ;i++){
+        console.log(alumnos.options.length);
+        if(alumnos.options[i].selected){
+            console.log(alumnos.options[i]);
+            matriculados.appendChild(alumnos.options[i]);
+        }
+
+}
+
+
+
+}
+//matriculados.body.appendChild(seleccion[0])
+</script>
+    
+</body>
+</html>

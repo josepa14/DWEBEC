@@ -4,26 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/alumno.js"></script>
-    <script src="js/clase.js"></script>
-    <script src="js/metodos.js"></script>
+    <script src="js/Alumno.js"></script>
+    <script src="js/Clase.js"></script>
+    <script src="js/mantenimientoClase.js"></script>
     
     <title>Document</title>
 </head>
 <body>
-    <form>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre
+                    <span id="ordenNombreCreciente">^</span>
+                    <span id="ordenNombreDeCreciente">v</span>
+                
+                </th>
+                <th >Apellido1
+                    <span id="ordenApeCreciente">^</span>
+                    <span id="ordenApeDeCreciente">v</span>
+                </th>
+                <th id="ordApe2">Apellido2
+                    <span id="ordenApe2Creciente">^</span>
+                    <span id="ordenApe2DeCreciente">v</span>
 
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre"/><br>
-
-        <label for="apellido1">Apellido1</label>
-        <input type="text" id="apellido1" name="apellido1"/><br>
-
-        <label for="apellido2">Apellido2</label>
-        <input type="text" id="apellido2" name="apellido2"/><br><br>
-
-        <input type="button" id="guardar" value="Guardar"/>
-    </form>
+                </th>
+                <th>Accion</th>
+                 
+            </tr>
+        </thead>
+        <tbody id="cuerpo">
+        </tbody>
+        <tfoot>
+            <tr id="insertar">
+                <td><input type="text" id="nombre" name="nombre"/></td>
+                <td><input type="text" id="apellido1" name="apellido1"/></td>
+                <td><input type="text" id="apellido2" name="apellido2"/></td>
+                <td><input type="button" id="guardar" value="Guardar"/></td>
+            </tr>
+            <tr id="editar" style="display:none">
+                <td><input  type="text" name="nombre" id="eDnombre"/></td>
+                <td><input  type="text" name="apellido1" id="eDapellido1"/></td>
+                <td><input  type="text" name="apellido2" id="eDapellido2"/></td>
+                <td><input  type="button" name="Editar" value="Editar" id="eDGuardar"/></td>
+            </tr>
+        </tfoot>
+    </table>
     
     
 </body>
