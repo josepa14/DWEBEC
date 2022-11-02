@@ -49,6 +49,8 @@ window.onload=function(){
     var btnOrdnDecreciente = document.getElementById("ordenNombreDeCreciente");
     var ordApeDeCreciente = document.getElementById("ordenApeDeCreciente");
     var ordApe2DeCreciente = document.getElementById("ordenApe2DeCreciente");
+    var guardarTabla = document.getElementById("guardarDatos");
+    var leerTabla= document.getElementById("leerDatos");
 
     
     btnOrdnCreciente.onclick=function(){
@@ -100,5 +102,50 @@ window.onload=function(){
     apellido2.value="";
     nombre.focus();
     }
+
+    guardarTabla.onclick=function(){
+        window.alert("guardando tabla");
+        var datos = [];
+        for(let i = 0; i < tBody.rows.length;i++){
+            datos[i] = [];
+            //debugger;
+            for (let j = 0; j < tBody.rows[i].cells.length;j++){
+                datos[i].push(tBody.rows[i].cells[j].textContent)
+            }
+
+        }
+        localStorage.setItem("tabla",JSON.stringify(datos));
+    }
+    leerTabla.onclick=function(){
+        //Todo esto para eliminar fila por fila
+/*
+     let filas1 = tBody.rows.length-1;
+        for (let i = filas1; i >= 0; i--){
+            tBody.deleteRow(i);
+            window.alert("borrando fila "+i);
+        }
+    */
+      //clase.limpiar();
+    clase.limpiar();
+
+    
+      let datos=JSON.parse(localStorage.getItem("tabla"));
+      let filas = datos.length;
+      for (let i = 0; i < filas; i++){
+        clase.annade(new Alumno(datos[i][0],datos[i][1],datos[i][2]));
+    }
+    clase.pinta();
+
+    }
+
+
+
+
+
     clase = new Clase(tBody);
+
+
+
+
+
 }

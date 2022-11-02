@@ -41,3 +41,8 @@ Clase.prototype.borra=function(ind){
 Clase.prototype.edita=function(ind){
  //   document.getElementsByTagName("tfoot")[0].getElementsByTagName("tr")[0].style="display:none"
 }
+Clase.prototype.limpiar = function(){
+    this.tabla.innerHTML = "";
+    this.alumnos = [];
+
+}
