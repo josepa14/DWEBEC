@@ -117,15 +117,7 @@ window.onload=function(){
         localStorage.setItem("tabla",JSON.stringify(datos));
     }
     leerTabla.onclick=function(){
-        //Todo esto para eliminar fila por fila
-/*
-     let filas1 = tBody.rows.length-1;
-        for (let i = filas1; i >= 0; i--){
-            tBody.deleteRow(i);
-            window.alert("borrando fila "+i);
-        }
-    */
-      //clase.limpiar();
+
     clase.limpiar();
 
     
