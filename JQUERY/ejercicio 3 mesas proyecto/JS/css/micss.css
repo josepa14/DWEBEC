@@ -1,0 +1,35 @@
+.sala{
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid;
+    width: 1000px;
+    height: 800px;
+}
+
+.mesa{
+    position: relative;
+    width: 140px;
+    height: 140px;
+    background-color: brown;
+    margin: 5px;
+}
+
+
+
+
+.contenedor{
+    position: relative;
+    width: 100%;
+    min-width: 1300px;
+
+}
+
+.almacen{
+    position: absolute;
+    left: 1000px;
+    top: 0;
+    border: 1px solid;
+    width: 300px;
+    height: 800px;
+}
