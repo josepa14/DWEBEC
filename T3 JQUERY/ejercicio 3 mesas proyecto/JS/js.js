@@ -1,17 +1,20 @@
+//servidor trae mesas y yo creo en modo objeto
+//pinto mesas, en almacen
 $(function () {
-  $(".mesa").draggable({
+  var mesa = new Mesa()
+  $('#agregar').click(function () {
+    mesa.pinta();
+  })
 
-    start: function (ev, ui) {
-      $(this).attr("data-y", ui.offset.top)
-      $(this).attr("data-x", ui.offset.left)
-    }, revert: true, helper: "clone", revertDuration: 0
-  });
+  mesa.movimiento();
+
+
 
   $("#almacen").droppable({
     drop: function (ev, ui) {
-      var mesa = ui.draggable;
-      mesa.attr("style", "");
-      $(this).append(mesa)
+     let mesaAlmacen = ui.draggable;
+     mesaAlmacen.attr("style", "");
+      $(this).append(mesaAlmacen)
 
     }
   });
@@ -29,11 +32,19 @@ $(function () {
       var height = parseInt(mesa.height())
 
 
-      var pos1 = [left, +left + width, top, top + height]
-      console.log(top)
-      console.log(left)
 
-      var mesaYa = $(".sala .mesa").eq(0);
+      var pos1 = [left, +left + width, top, top + height]
+      m1 = new Mesa(left, top, left + width, top + height);
+      m1.posicion();
+
+
+
+
+
+      //$.each(function(ev,i){
+        console.log('hola')
+        var mesaYa = $(".sala .mesa").eq(0);
+      console.log(mesaYa)
       if (mesaYa.length > 0) {
 
         var posX = parseInt(mesaYa.offset().left)
@@ -57,9 +68,15 @@ $(function () {
         $(this).append(mesa)
         mesa.css({ position: "absolute", top: top - difY + "px", left: left - difX + "px" })
       }
+      //})
+      
     }
   }
   );
 
 
 })
+
+//crear objeto mesa
+//crear objeto sala
+//crear objeto almacen
