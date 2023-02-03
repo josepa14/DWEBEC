@@ -6,6 +6,7 @@ $(function () {
     mesa.pinta();
   })
 
+  //control de movimiento
   mesa.movimiento();
 
 
