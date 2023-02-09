@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="JS/jquery-3.6.3.min.js"></script>
-    <script src="JS/jquery-ui.js"></script>
-    <script src="JS/mesa.js"></script>
-    <script src="JS/js.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="JS/jquery-3.6.3.min.js"></script>
+        <script src="JS/jquery-ui.js"></script>
+        <script src="JS/mesa.js"></script>
+        <script src="JS/js.js"></script>
 
-    <link rel="stylesheet" href="JS/css/jquery-ui.css">
-    <link rel="stylesheet" href="JS/css/jquery-ui.structure.css">
-    <link rel="stylesheet" href="JS/css/jquery-ui.theme.css">
-    <link rel="stylesheet" href="JS/css/micss.css">
+        <link rel="stylesheet" href="JS/css/jquery-ui.css">
+        <link rel="stylesheet" href="JS/css/jquery-ui.structure.css">
+        <link rel="stylesheet" href="JS/css/jquery-ui.theme.css">
+        <link rel="stylesheet" href="JS/css/micss.css">
 
-    <title>Mesas</title>
-</head>
-<body>
-    <h1>aaa</h1>
-    <button id="agregar">agregar</button>
-    <div class="contenedor">
-        <div id="sala" class="sala"></div>
+        <title>Mesas</title>
+    </head>
+    <body>
+        <h1>aaa</h1>
+        <button id="agregar">agregar</button>
+        <div class="contenedor">
+            <div id="sala" class="sala"></div>
 
-        <div class="almacen" id="almacen">
-            <div class="mesa"></div>
-            <div class="mesa"></div>
-            <div class="mesa"></div>
+            <div class="almacen" id="almacen">
+                <div class="mesa" id="mesa_1"></div>
+                <div class="mesa" id="mesa_2"></div>
+                <div class="mesa" id="mesa_3"></div>
+            </div>
+
         </div>
-        
-    </div>
-</body>
+        <div class="dialog" title="Crear nueva mesa">
+            <label>altura</label>
+            <input type="int" id="altura" name="altura">
+            <label>anchura</label>
+            <input type="int" id="anchura" name="anchura">
+            <button id="anadir" type="submit">Añadir</button>
+        </div>
+    </body>
 </html>
