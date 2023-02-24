@@ -1,0 +1,7 @@
+<p>{{intro}}</p>
+
+<button (click)="cargarPaises()">Cargar paises</button>
+<ul>
+    <li *ngFor="let pais of paises" >{{pais}}</li>
+</ul>
+<input type="text" ngModel="intro" (keyup)="pulsado($event)">

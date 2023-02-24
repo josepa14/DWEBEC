@@ -3,7 +3,8 @@
 $(function () {
 //porgramacion eficiente meter en variables sala y almacen y pasarselo 
 //a pinta para que no se tenga que buscar cadave que se ejecuta al mismo tiempo que se pueden cambiar en la lineas de aqui
-  //ajax de la api
+var almacen= $("#almacen");
+//ajax de la api
 
 //este codigo debe borrarse cuando desaparezcan las mesas añadidas asangre
   $(".mesa").draggable({
@@ -12,8 +13,9 @@ $(function () {
       $(this).attr("data-x", ui.offset.left)
     }, revert: true, helper: "clone", revertDuration: 0
   })
+
 //este codigo esta bien aqui
-  $("#almacen").droppable({
+  almacen.droppable({
     drop: function (ev, ui) {
       let mesaAlmacen = ui.draggable;
       mesaAlmacen.attr("style", "");
